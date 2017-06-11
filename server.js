@@ -9,6 +9,9 @@ const app = express();
 mongoose.connect('mongodb://localhost/employees');
 mongoose.Promise = global.Promise;
 
+app.use(express.static('public'));
+app.use(express.static('dist'));
+
 app.use(bodyParser.json());
 
 app.use('/api', require('./routes/api'));
