@@ -11,51 +11,7 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-
-        <div class="form-block">
-
-            <div class="select-block">
-                <label for="position">Position</label>
-                <select id="position">
-                    <option value="">iOS Developer</option>
-                    <option value="">Android Delevoper</option>    
-                </select>
-            </div>
-
-            <div class="select-block">
-                <label for="city">City</label>
-                <select id="city">
-                    <option value="">San Francisco</option>
-                    <option value="">New York</option>   
-                </select>
-            </div>
-
-            <button>Find!</button>
-        </div>
-
-        <ul class="employees-list">
-
-            <li class="employee-card">
-                <div class="status status">
-                    <div class="status__icon"></div>
-                    <span class="status__title">Available</span>
-                </div>
-                <span class="employee-card__name">Simon Patterson</span>
-                <span class="employee-card__info">iOS Developer, New York</span>
-            </li>
-
-            <li class="employee-card">
-                <div class="status status--unavailable">
-                    <div class="status__icon"></div>
-                    <span class="status__title">Unavailable</span>
-                </div>
-                <span class="employee-card__name">Dora Mills</span>
-                <span class="employee-card__info">iOS Developer, San Francisco</span>
-            </li>
-
-        </ul>
-    </div>
-    
+    <div id="root"></div>
+    <script src="bundle.js"></script>
 </body>
 </html>

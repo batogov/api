@@ -4,10 +4,13 @@ const Employee = require('../models/employee');
 
 // Get the list of employees from the DB
 router.get('/employees', function(req, res, next) {
-    // Employee.find({}).then(function(employees) {
-    //     res.send(employees);
-    // });
-    Employee.find({'city': req.query.city}).then(function(employees) {
+    queryParameters = req.query;
+
+    Object.keys(queryParameters).forEach(function(key) {
+        if (queryParameters[key] === 'All') delete queryParameters[key];
+    });
+
+    Employee.find(queryParameters).sort({ available: -1 }).then(function(employees) {
         res.send(employees);
     });
 });
