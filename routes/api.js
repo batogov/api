@@ -18,7 +18,7 @@ router.get('/employees', function(req, res, next) {
 // Add a new employee to the DB
 router.post('/employees', function(req, res, next) {
     // var employee = new Employee(req.body);
-    // Employee.save();
+    // employee.save();
     Employee.create(req.body).then(function(employee) {
         res.send(employee);
     }).catch(next);
