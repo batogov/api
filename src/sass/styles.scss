@@ -66,13 +66,13 @@ button {
     display: inline-block;
     margin-right: 15px;
     width: 220px;
-}
 
-.select-block label {
-    display: block;
-    margin-bottom: 5px;
+    & label {
+        display: block;
+        margin-bottom: 5px;
 
-    font-size: 16px;
+        font-size: 16px;
+    }
 }
 
 .employees-list {
@@ -88,39 +88,40 @@ button {
     margin-bottom: 10px;
 
     font-size: 16px;
+
+    & .status__title {
+        vertical-align: middle;
+    }
+
+    & span {
+        color: #76b852;
+    }
+
+    & .status__icon {
+        background-color: #76b852;
+    }
+
+    &--unavailable {
+        & span {
+            color: #ee4f4f;
+        }
+
+        & .status__icon {
+            background-color: #ee4f4f;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-right: 5px;
+
+        border-radius: 50%;
+
+        vertical-align: middle;
+    }
 }
-
-.status__icon {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    margin-right: 5px;
-
-    border-radius: 50%;
-
-    vertical-align: middle;
-}
-
-.status .status__title {
-    vertical-align: middle;
-}
-
-.status span {
-    color: #76b852;
-}
-
-.status .status__icon {
-    background-color: #76b852;
-}
-
-.status--unavailable span {
-    color: #ee4f4f;
-}
-
-.status--unavailable .status__icon {
-    background-color: #ee4f4f;
-}
-
 
 .employee-card {
     display: inline-block;
@@ -128,25 +129,25 @@ button {
 
     background-color: #fff;
     border-radius: 3px;
-}
 
-.employee-card:nth-child(2n) {
-    margin-left: 30px;
-}
+    &:nth-child(2n) {
+        margin-left: 30px;
+    }
 
-.employee-card__name {
-    display: block;
-    margin-bottom: 10px;
+    &__name {
+        display: block;
+        margin-bottom: 10px;
 
-    font-size: 25px;
-    font-weight: 700;
-}
+        font-size: 25px;
+        font-weight: 700;
+    }
 
-.employee-card__info {
-    display: block;
+    &__info {
+        display: block;
 
-    font-size: 16px;
-    color: #333;
+        font-size: 16px;
+        color: #333;
+    }
 }
 
 .no-employees {
